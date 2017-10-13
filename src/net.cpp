@@ -7,7 +7,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/DIVI-config.h"
+#include "config/divi-config.h" // "config/DIVI-config.h"
 #endif
 
 #include "net.h"

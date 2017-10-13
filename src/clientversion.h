@@ -6,7 +6,7 @@
 #define BITCOIN_CLIENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/Divi-config.h"
+#include "config/divi-config.h" // "config/Divi-config.h"
 #else
 
 /**

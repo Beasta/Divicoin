@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/Divi-config.h"
+#include "config/divi-config.h" // "config/Divi-config.h"
 #endif
 
 #include <cstring>

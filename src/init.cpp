@@ -1570,11 +1570,11 @@ bool AppInit2(boost::thread_group& threadGroup)
         fEnableObfuscation = true;
         nObfuscationRounds = 99999;
     }
-
-    nAnonymizediviAmount = GetArg("-anonymizediviamount", 0);
-    if (nAnonymizediviAmount > 999999) nAnonymizediviAmount = 999999;
-    if (nAnonymizediviAmount < 2) nAnonymizediviAmount = 2;
-
+    int nAnonymizeDiviAmount = 1000;
+    nAnonymizeDiviAmount = GetArg("-anonymizediviamount", 0);
+    if (nAnonymizeDiviAmount > 999999) nAnonymizeDiviAmount = 999999;
+    if (nAnonymizeDiviAmount < 2) nAnonymizeDiviAmount = 2; 
+   
     fEnableSwiftTX = GetBoolArg("-enableswifttx", fEnableSwiftTX);
     nSwiftTXDepth = GetArg("-swifttxdepth", nSwiftTXDepth);
     nSwiftTXDepth = std::min(std::max(nSwiftTXDepth, 0), 60);
@@ -1588,7 +1588,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nSwiftTXDepth %d\n", nSwiftTXDepth);
     LogPrintf("Obfuscation rounds %d\n", nObfuscationRounds);
-    LogPrintf("Anonymize divi Amount %d\n", nAnonymizediviAmount);
+    LogPrintf("Anonymize divi Amount %d\n", nAnonymizeDiviAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations
