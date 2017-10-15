@@ -1570,7 +1570,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         fEnableObfuscation = true;
         nObfuscationRounds = 99999;
     }
-    int nAnonymizeDiviAmount = 1000;
+ 
     nAnonymizeDiviAmount = GetArg("-anonymizediviamount", 0);
     if (nAnonymizeDiviAmount > 999999) nAnonymizeDiviAmount = 999999;
     if (nAnonymizeDiviAmount < 2) nAnonymizeDiviAmount = 2; 
