@@ -9,9 +9,9 @@
     vars:
       instance_type: t2.micro # Change Instance Type
       security_group: Pivx-server # Change Security Group Name
-      image: ami-6f198a0c # Please replace AMI id for ubuntu 16.04 LTS
-      keypair: server.pheonixsolutions.com # Please replace this with existing key_pair which you in your AWS account
-      region: ap-southeast-1 # Change the Region 
+      image: ami-10547475 # Please replace AMI id for ubuntu 16.04 LTS
+      keypair: mocci-ansible # Please replace this with existing key_pair which you in your AWS account
+      region: us-east-2 # Change the Region 
       count: 1
 
     # Task to Launch OR Create an EC2 Instance
