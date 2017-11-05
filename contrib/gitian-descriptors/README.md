@@ -39,7 +39,7 @@ Once you've got the right hardware and software:
 ---------------------
 
 `gitian-builder` now also supports building using LXC. See
-[  https://help.ubuntu.com/12.04/serverguide/lxc.html](  https://help.ubuntu.com/12.04/serverguide/lxc.html)
+[  https://help.ubuntu.com/lts/serverguide/lxc.html](  https://help.ubuntu.com/lts/serverguide/lxc.html)
 ... for how to get LXC up and running under Ubuntu.
 
 If your main machine is a 64-bit Mac or PC with a few gigabytes of memory
