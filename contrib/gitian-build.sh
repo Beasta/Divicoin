@@ -14,8 +14,8 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=
-VERSION=
+SIGNER=G9m4TV5LX9ckz/ienyUAiPHW26SjMsURS6YrZdA3hHU
+VERSION=0.0.01
 commit=false
 url=https://github.com/Divicoin/Divicoin # url=https://github.com/divi-project/divi
 proc=2
@@ -247,7 +247,7 @@ then
 fi
 
 # Set up build
-pushd ./divi
+pushd ./Divicoin
 git fetch
 git checkout ${COMMIT}
 popd
@@ -266,7 +266,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../divi/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../Divicoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
