@@ -1,13 +1,12 @@
-package=libSM
-$(package)_version=1.2.2
+package=xtrans
+$(package)_version=1.3.4
 $(package)_download_path=http://xorg.freedesktop.org/releases/individual/lib/
 $(package)_file_name=$(package)-$($(package)_version).tar.bz2
-$(package)_sha256_hash=0baca8c9f5d934450a70896c4ad38d06475521255ca63b717a6510fdb6e287bd
-$(package)_dependencies=xtrans xproto libICE
+$(package)_sha256_hash=054d4ee3efd52508c753e9f7bc655ef185a29bd2850dd9e2fc2ccc33544f583a
+$(package)_dependencies=
 
 define $(package)_set_vars
-  $(package)_config_opts=--without-libuuid  --without-xsltproc  --disable-docs --disable-static
-  $(package)_config_opts_linux=--with-pic
+$(package)_config_opts_linux=--with-pic --disable-static
 endef
 
 define $(package)_config_cmds
