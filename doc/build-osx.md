@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/DIVI-Project/DIVI.git
-        cd DIVI
+        git clone https://github.com/Divicoin/Divicoin.git
+        cd Divicoin
 
 2.  Build divid:
 

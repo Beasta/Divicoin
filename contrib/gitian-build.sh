@@ -14,8 +14,8 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=G9m4TV5LX9ckz/ienyUAiPHW26SjMsURS6YrZdA3hHU
-VERSION=0.0.01
+SIGNER=
+VERSION=
 commit=false
 url=https://github.com/Divicoin/Divicoin # url=https://github.com/divi-project/divi
 proc=2
@@ -248,8 +248,8 @@ fi
 
 # Set up build
 pushd ./Divicoin
-git fetch
-git checkout ${COMMIT}
+#git fetch
+#git checkout ${COMMIT}
 popd
 
 # Build
@@ -274,7 +274,7 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit divi=${COMMIT} --url divi=${url} ../Divicoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Divicoin=${COMMIT} --url Divicoin=${url} ../Divicoin/contrib/gitian-descriptors/gitian-linux.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../Divicoin/contrib/gitian-descriptors/gitian-linux.yml
 	    mv build/out/divi-*.tar.gz build/out/src/divi-*.tar.gz ../divi-binaries/${VERSION}
 	fi
@@ -284,7 +284,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit divi=${COMMIT} --url divi=${url} ../Divicoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Divicoin=${COMMIT} --url Divicoin=${url} ../Divicoin/contrib/gitian-descriptors/gitian-win.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../Divicoin/contrib/gitian-descriptors/gitian-win.yml
 	    mv build/out/divi-*-win-unsigned.tar.gz inputs/divi-win-unsigned.tar.gz
 	    mv build/out/divi-*.zip build/out/divi-*.exe ../divi-binaries/${VERSION}
@@ -295,7 +295,7 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit divi=${COMMIT} --url divi=${url} ../Divicoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit Divicoin=${COMMIT} --url Divicoin=${url} ../Divicoin/contrib/gitian-descriptors/gitian-osx.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../Divicoin/contrib/gitian-descriptors/gitian-osx.yml
 	    mv build/out/divi-*-osx-unsigned.tar.gz inputs/divi-osx-unsigned.tar.gz
 	    mv build/out/divi-*.tar.gz build/out/divi-*.dmg ../divi-binaries/${VERSION}
