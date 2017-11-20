@@ -21,7 +21,7 @@ packages:
 reference_datetime: "2015-06-01 00:00:00"
 remotes:
 - "url": "https://github.com/Divicoin/Divicoin.git"
-  "dir": "divi"
+  "dir": "Divicoin"
 files:
 - "raspberrypi-tools.tar.gz"
 script: |
@@ -70,7 +70,7 @@ script: |
   done
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd divi
+  cd Divicoin
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
