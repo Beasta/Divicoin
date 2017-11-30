@@ -280,7 +280,7 @@ void BitcoinGUI::createActions(const NetworkStyle* networkStyle)
 {
     QActionGroup* tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
+        overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Home"), this);
     overviewAction->setStatusTip(tr("Show general overview of wallet"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
@@ -829,7 +829,7 @@ void BitcoinGUI::setNumBlocks(int count)
     enum BlockSource blockSource = clientModel->getBlockSource();
     switch (blockSource) {
     case BLOCK_SOURCE_NETWORK:
-        progressBarLabel->setText(tr("Synchronizing with network..."));
+                progressBarLabel->setText(tr("Synching to Divi Network...")); // progressBarLabel->setText(tr("Synchronizing with network..."));
         break;
     case BLOCK_SOURCE_DISK:
         progressBarLabel->setText(tr("Importing blocks from disk..."));
