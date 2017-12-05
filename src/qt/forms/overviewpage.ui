@@ -319,7 +319,7 @@
             <item row="1" column="0">
              <widget class="QLabel" name="labelBalanceText">
               <property name="text">
-               <string>Available:</string>
+               <string>Balance</string>
               </property>
              </widget>
             </item>
@@ -1078,7 +1078,7 @@
               </font>
              </property>
              <property name="text">
-              <string>Obfuscation</string>
+              <string>Anonymizing</string>
              </property>
             </widget>
            </item>

@@ -142,9 +142,9 @@ OverviewPage::OverviewPage(QWidget* parent) : QWidget(parent),
             ui->frameObfuscation->setEnabled(false);
         } else {
             if (!fEnableObfuscation) {
-                ui->toggleObfuscation->setText(tr("Start Obfuscation"));
+                ui->toggleObfuscation->setText(tr("Start Anonymization")); // ui->toggleObfuscation->setText(tr("Start Obfuscation"));
             } else {
-                ui->toggleObfuscation->setText(tr("Stop Obfuscation"));
+                ui->toggleObfuscation->setText(tr("Stop Anonymization")); // ui->toggleObfuscation->setText(tr("Stop Obfuscation"));
             }
             timer = new QTimer(this);
             connect(timer, SIGNAL(timeout()), this, SLOT(obfuScationStatus()));
@@ -433,7 +433,7 @@ void OverviewPage::obfuScationStatus()
 
             ui->obfuscationEnabled->setText(tr("Disabled"));
             ui->obfuscationStatus->setText("");
-            ui->toggleObfuscation->setText(tr("Start Obfuscation"));
+            ui->toggleObfuscation->setText(tr("Start Anonymization")); // ui->toggleObfuscation->setText(tr("Start Obfuscation"));
         }
 
         return;
@@ -522,10 +522,10 @@ void OverviewPage::toggleObfuscation()
     obfuScationPool.cachedNumBlocks = std::numeric_limits<int>::max();
 
     if (!fEnableObfuscation) {
-        ui->toggleObfuscation->setText(tr("Start Obfuscation"));
+        ui->toggleObfuscation->setText(tr("Start Anonymization")); // ui->toggleObfuscation->setText(tr("Start Obfuscation"));
         obfuScationPool.UnlockCoins();
     } else {
-        ui->toggleObfuscation->setText(tr("Stop Obfuscation"));
+        ui->toggleObfuscation->setText(tr("Stop Anonymization")); // ui->toggleObfuscation->setText(tr("Stop Obfuscation"));
 
         /* show obfuscation configuration if client has defaults set */
 
